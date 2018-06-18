@@ -1,4 +1,5 @@
 package estructurasdecontrol;
+import java.util.Scanner;
 
 public class EstructurasDeControl {
     public static void main(String[] args) {
@@ -7,7 +8,7 @@ public class EstructurasDeControl {
         String diaSeleccionado;
         
         // Instanciando la clase Scanner
-        java.util.Scanner scan = new java.util.Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         
         // Solicito el dato al usuario0
         System.out.print("Introduzca un número: ");
@@ -24,7 +25,7 @@ public class EstructurasDeControl {
             case 5: diaSeleccionado = "Viernes"; break;
             case 6: diaSeleccionado = "Sábado"; break;
             case 7: diaSeleccionado = "Domingo"; break;
-            default: diaSeleccionado = "No es ningún dia"; break;
+            default: diaSeleccionado = "No es un día válido"; break;
         }
         
         // Mostrando el resultado

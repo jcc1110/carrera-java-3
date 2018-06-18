@@ -18,7 +18,7 @@ public class Persona {
     
     // Métodos
     public String obtenerNombreCompleto(boolean mayus, boolean minus) {
-        String cadena = this.nombre +" "+ this.apellido;        
+        String cadena = this.nombre +" "+ this.apellido;
         if (mayus == true) {
             cadena = cadena.toUpperCase();
         } else if (minus == true) {

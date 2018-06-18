@@ -14,7 +14,7 @@ public class Variables {
         
         // Presentación de los valores
         System.out.println("El valor de mi variable global es: " + a);
-        System.out.println("El valor de mi variable local es: " + b);
+        System.out.println("El valor de mi variable global es: " + b);
         System.out.println("El valor de mi variable referencial es: " + c);
         System.out.println("El valor de mi constante es: " + PI);
         

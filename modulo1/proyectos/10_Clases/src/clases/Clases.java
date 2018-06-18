@@ -31,7 +31,7 @@ public class Clases {
         mayus = scan.next();
         
         // Valido la opción
-        esMayus = ("S".equals(mayus));        
+        esMayus = ("S".equals(mayus)) ? true : false;        
         /*if ("S".equals(mayus)) {
             esMayus = true;
         } else {

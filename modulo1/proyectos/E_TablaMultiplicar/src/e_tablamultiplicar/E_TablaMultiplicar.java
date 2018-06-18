@@ -1,12 +1,14 @@
 package e_tablamultiplicar;
 
+import java.util.Scanner;
+
 public class E_TablaMultiplicar {
     public static void main(String[] args) {
         // Declarando variable entera a solicitar al usuario
         int numero;
         
         // Instanciando la clase Scanner
-        java.util.Scanner scan = new java.util.Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         // Solicito el número al usuario
         System.out.print("Ingrese un número: ");

@@ -7,7 +7,8 @@ public class Arreglos {
         String[] nombres = {"Anthony", "Ricardo", "Ana", "Petra"};
         int[] numeros = {1, 2, 3};
         
-        // Segunda forma de declarar un arreglo, valor entre corchetes es la longitud que tendrá el arreglo
+        // Segunda forma de declarar un arreglo
+        // El valor entre corchetes será la longitud que tendrá el arreglo
         String[] apellidos = new String[2];
         apellidos[0] = "Hurtado";
         apellidos[1] = "Perez";
