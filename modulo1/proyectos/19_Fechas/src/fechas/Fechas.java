@@ -46,6 +46,6 @@ public class Fechas {
         // Para formatear las fechas
         System.out.println("Formateo de fechas:");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
-        System.out.println(formatter.format(ld2));
+        System.out.println(formatter.format(ld));
     }
 }

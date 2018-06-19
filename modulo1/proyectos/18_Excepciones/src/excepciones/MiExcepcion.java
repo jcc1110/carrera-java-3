@@ -1,7 +1,7 @@
 package excepciones;
 
 /**
- * Construyendo mi propia excepción
+ * Construyendo mi propia excepción.
  * @author Anthony Hurtado
  * @version 1.0.0
  */

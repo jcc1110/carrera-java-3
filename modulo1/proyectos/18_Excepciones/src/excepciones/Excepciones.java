@@ -7,9 +7,13 @@ package excepciones;
  * @see MiExcepcion
  */
 public class Excepciones {
+    /**
+     * Método de arranque de la aplicación
+     * @param args Parametros iniciales para la aplicación
+     */
     public static void main(String[] args) {
         // Instancio la clase de Division
-        Division div = new Division(11, 2);
+        Division div = new Division(11, 0);
 
         // Llamamos al método para operar y lo tratamos con el bloque try-catch-finally
         try {
@@ -23,7 +27,7 @@ public class Excepciones {
         } catch(Exception ex) {
             System.out.println(ex.getMessage());
         } finally {
-            System.out.println("Finalice la operación");
+            System.out.println("\nFinalice la operación");
         }
     }
 }

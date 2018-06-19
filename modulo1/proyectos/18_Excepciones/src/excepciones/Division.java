@@ -30,7 +30,7 @@ public class Division {
      * @throws MiExcepcion
      */
     public void dividir() throws MiExcepcion {
-        int resultado;     
+        int resultado;
         
         if (this.denominador == 0) {
             throw new MiExcepcion("La división no puede ser realizada con un valor cero.");
