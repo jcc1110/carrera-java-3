@@ -10,7 +10,7 @@ public class Herencia {
         // Presento los datos
         System.out.println(empleado.getNombre());
         System.out.println(empleado.getApellido());
-        System.out.println(empleado.setSueldo(11));
+        System.out.println(empleado.setSueldo(8));
         System.out.println(empleado.getSueldo());
     }
 }

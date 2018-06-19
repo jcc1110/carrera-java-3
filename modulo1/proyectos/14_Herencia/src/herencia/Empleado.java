@@ -8,7 +8,7 @@ public class Empleado extends Persona {
     public String getSueldo() {
         String formato = "El sueldo de "+ super.getNombre();
         formato += ", " + super.getApellido();
-        formato += " es " + this.sueldo;        
+        formato += " es Bs. " + this.sueldo;        
         return formato.toUpperCase();
     }
     
