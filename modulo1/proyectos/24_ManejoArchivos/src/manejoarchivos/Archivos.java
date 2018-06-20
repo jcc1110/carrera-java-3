@@ -6,6 +6,11 @@ import java.io.PrintWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Clase para manejo de archivos
+ * @author Anthony Hurtado
+ * @version 1.0.0
+ */
 public class Archivos {
     // Crear un arhivo
     public static void crear(String ruta) {
@@ -20,15 +25,17 @@ public class Archivos {
             salida.close();
             
             // Imprimo un mensaje
-            System.out.println("El archivo se ha creado correctamente");
+            System.out.println("El archivo se ha creado correctamente.");
         } catch (IOException ex) {
             // Capturando la excepción
+            System.out.println(ex.getMessage());
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
     // Escribir dentro de un archivo
-    public static void escribir(String ruta) {
+    public static void escribir(String ruta, String texto) {
         try {
             // Instancio mi clase
             File archivo = new File(ruta);
@@ -37,17 +44,18 @@ public class Archivos {
             PrintWriter salida = new PrintWriter(new FileWriter(archivo));
             
             // Escribo por primera vez en el archivo
-            String contenido = "Contenido a escribir en el archivo";
-            salida.println(contenido);
+            salida.println(texto);
             salida.println("Fin de escritura");
             
             // Cierro la conexión
             salida.close();
             
             // Imprimo un mensaje
-            System.out.println("Se ha escrito correctamente al archivo");
+            System.out.println("Se ha escrito correctamente al archivo.");
         } catch (IOException ex) {
             // Capturando la excepción
+            System.out.println(ex.getMessage());
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
@@ -71,14 +79,19 @@ public class Archivos {
             
             // Cierro la conexión
             entrada.close();
+            
+            // Imprimo un mensaje
+            System.out.println("Se ha leido el archivo correctamente.");
         } catch (IOException ex) {
             // Capturando la excepción
+            System.out.println(ex.getMessage());
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
     // Agregar información al archivo
-    public static void anexar(String ruta) {
+    public static void anexar(String ruta, String texto) {
         try {
             // Instancio mi clase
             File archivo = new File(ruta);
@@ -87,8 +100,7 @@ public class Archivos {
             PrintWriter salida = new PrintWriter(new FileWriter(archivo, true));
             
             // Añado la información necesaria
-            String contenido = "Anexando información al archivo";
-            salida.println(contenido);
+            salida.println(texto);
             salida.println("Fin de anexar");
             
             // Cierro la conexión
@@ -98,6 +110,8 @@ public class Archivos {
             System.out.println("Se ha anexado información correctamente");
         } catch (IOException ex) {
             // Capturando la excepción
+            System.out.println(ex.getMessage());
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }

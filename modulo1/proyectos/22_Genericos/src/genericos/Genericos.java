@@ -7,7 +7,7 @@ public class Genericos {
         cg.obtenerTipo();
         
         // Generico de Tipo cadena
-        ClaseGenerica<String> cg2 = new ClaseGenerica<>("AH");
+        ClaseGenerica<String> cg2 = new ClaseGenerica<>("Anthony Hurtado");
         cg2.obtenerTipo();
 
         // Generico de Tipo double

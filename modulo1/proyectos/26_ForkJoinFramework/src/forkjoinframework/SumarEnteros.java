@@ -59,14 +59,14 @@ public class SumarEnteros extends RecursiveTask<Long> {
         // Le pido a mi subtarea que me regrese su resultado y se lo sumo a la cuenta que llevo
         if(subTarea != null) {
             // Resultado -> Error
-            this.suma += subTarea.join();
+            //this.suma += subTarea.join();
             
             // Resultado -> Exception
-            /*try {
+            try {
                 this.suma += subTarea.get();
             } catch (InterruptedException | ExecutionException ex) {
                 System.out.println(ex.getMessage());
-            }*/
+            }
         }
 
         // Retorno el resultado de la suma

@@ -2,15 +2,16 @@ package genericos;
 
 public class ClaseGenerica<T> {
     // Atributo generico
-    T objeto;
+    T atributo;
     
     // Constructor
-    public ClaseGenerica(T _objeto) {
-        this.objeto = _objeto;
+    public ClaseGenerica(T _atributo) {
+        this.atributo = _atributo;
     }
     
     // Método para obtener el tipo de dato
     public void obtenerTipo() {
-        System.out.println("T es: " + this.objeto.getClass().getName());
+        System.out.println(
+                "T es: "+ this.atributo.getClass().getName() +" y su valor es "+ this.atributo);
     }
 }

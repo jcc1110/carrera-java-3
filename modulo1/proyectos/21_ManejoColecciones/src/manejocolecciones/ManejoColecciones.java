@@ -24,7 +24,7 @@ public class ManejoColecciones {
         // Mapa de clave:valor
         Map usuarios = new HashMap();
         usuarios.put("s24dafszf", "anhurtado");
-        usuarios.put("asda96341", "pepe");
+        usuarios.put("asda96341", "pemujica");
         recorrer(usuarios.keySet());
         recorrer(usuarios.values());
     }
