@@ -27,7 +27,9 @@ public class FileControl {
             // Recorro la información del archivo
             while (this.getInformation() != null) {
                 this.setInformation(_entry.readLine());
-                infoList.add(this.getInformation());
+                if (this.getInformation() != null) {
+                    infoList.add(this.getInformation());
+                }
             }
             
             // Cierro la conexión al archivo
