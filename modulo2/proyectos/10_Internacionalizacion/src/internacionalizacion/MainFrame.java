@@ -18,8 +18,8 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         
-        /*Locale lo = new Locale("en", "US");
-        Locale.setDefault(lo);*/
+        Locale lo = new Locale("en", "US");
+        Locale.setDefault(lo);
         
         initComponents();
     }

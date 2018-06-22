@@ -7,14 +7,14 @@ public class Localizacion {
     public static void main(String[] args) {       
         // Imprimiendo los lenguajes soportados
         System.out.println("Lenguajes soportados:");
-        Locale[] availableLocales = Locale.getAvailableLocales();
-        for (Locale element : availableLocales) {
+        Locale[] regiones = Locale.getAvailableLocales();
+        for (Locale element : regiones) {
             System.out.println(element.getDisplayCountry() + ": " + element.toLanguageTag());
         }
         System.out.println("");
         
         // Estableciendo la localidad
-        Locale locale = new Locale("es","VE");
+        Locale locale = new Locale("en","US");
         Locale.setDefault(locale);
         
         // Obteniendo el Locale por defecto
@@ -35,7 +35,7 @@ public class Localizacion {
         // Formateando las fechas
         System.out.println("Formateando las fechas con Locale");
         DateTimeFormatter fDay = DateTimeFormatter.ofPattern("EEEE");
-        DateTimeFormatter fMonth = DateTimeFormatter.ofPattern("MMMM", Locale.FRANCE);
+        DateTimeFormatter fMonth = DateTimeFormatter.ofPattern("MMMM", Locale.CHINESE);
         System.out.println("Día: " + LocalDate.now().format(fDay));
         System.out.println("Mes: " + LocalDate.now().format(fMonth));
     }    

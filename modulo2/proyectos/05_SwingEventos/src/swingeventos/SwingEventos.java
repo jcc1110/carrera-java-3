@@ -3,6 +3,7 @@ import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -29,7 +30,7 @@ public class SwingEventos {
         JButton boton = new JButton("Saludar");
         
         // Implementación tradicional
-        boton.addActionListener(new ManejoEvento(texto));
+        //boton.addActionListener(new ManejoEvento(texto));
         
         /*boton.addActionListener(new ManejoEvento() {
             @Override
@@ -42,13 +43,13 @@ public class SwingEventos {
         });*/
         
         // Implementación de la interfaz requerida
-        /*ActionListener manejoEvento = e -> {
+        ActionListener manejoEvento = e -> {
             String mensaje;
             String valor = texto.getText();
             mensaje = (!valor.isEmpty()) ? "Hola, " + valor : "¡Hola mundo!";  
             JOptionPane.showMessageDialog(boton, mensaje);
         };
-        boton.addActionListener(manejoEvento);*/
+        boton.addActionListener(manejoEvento);
         
         // Añado mis componentes a la ventana
         cp.add(etiqueta);

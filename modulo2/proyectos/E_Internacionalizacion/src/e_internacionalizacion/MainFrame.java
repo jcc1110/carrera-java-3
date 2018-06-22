@@ -19,8 +19,9 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         // Establecemos la localización por defecto
-        /*Locale lc = new Locale("en","US");
-        Locale.setDefault(lc);*/
+        Locale lc = new Locale("en","US");
+        Locale.setDefault(lc);
+        
         initComponents();
     }
 
@@ -33,31 +34,31 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        lbHola = new javax.swing.JLabel();
+        lbMundo = new javax.swing.JLabel();
+        btnEspanol = new javax.swing.JButton();
+        btnIngles = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("e_internacionalizacion/Bundle"); // NOI18N
         setTitle(bundle.getString("MainFrame.title")); // NOI18N
 
-        jLabel1.setText(bundle.getString("MainFrame.jLabel1.text")); // NOI18N
+        lbHola.setText(bundle.getString("MainFrame.lbHola.text")); // NOI18N
 
-        jLabel2.setText(bundle.getString("MainFrame.jLabel2.text")); // NOI18N
+        lbMundo.setText(bundle.getString("MainFrame.lbMundo.text")); // NOI18N
 
-        jButton1.setText(bundle.getString("MainFrame.jButton1.text")); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEspanol.setText(bundle.getString("MainFrame.btnEspanol.text")); // NOI18N
+        btnEspanol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEspanolActionPerformed(evt);
             }
         });
 
-        jButton2.setText(bundle.getString("MainFrame.text")); // NOI18N
-        jButton2.setName(""); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnIngles.setText(bundle.getString("MainFrame.text")); // NOI18N
+        btnIngles.setName(""); // NOI18N
+        btnIngles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnInglesActionPerformed(evt);
             }
         });
 
@@ -68,32 +69,32 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jLabel1))
+                    .addComponent(btnEspanol)
+                    .addComponent(lbHola))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(81, Short.MAX_VALUE))
+                    .addComponent(lbMundo)
+                    .addComponent(btnIngles, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(lbHola)
+                    .addComponent(lbMundo))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnEspanol)
+                    .addComponent(btnIngles))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnEspanolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEspanolActionPerformed
         Locale lc = new Locale("es","VE");
         Locale.setDefault(lc);
         ResourceBundle rb;
@@ -101,9 +102,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         // LLamar al método para cambiar el idioma usando el recurso
         cambiarIdioma(rb);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnEspanolActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnInglesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInglesActionPerformed
         Locale lc = new Locale("en","US");
         Locale.setDefault(lc);
         ResourceBundle rb;
@@ -111,14 +112,14 @@ public class MainFrame extends javax.swing.JFrame {
         
         // LLamar al método para cambiar el idioma usando el recurso
         cambiarIdioma(rb);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnInglesActionPerformed
 
     private void cambiarIdioma(ResourceBundle resource) {
         // Cambiar el texto manualmente
-        jLabel1.setText(resource.getString("MainFrame.jLabel1.text"));
-        jLabel2.setText(resource.getString("MainFrame.jLabel2.text"));
-        jButton1.setText(resource.getString("MainFrame.jButton1.text"));
-        jButton2.setText(resource.getString("MainFrame.text"));
+        lbHola.setText(resource.getString("MainFrame.jLabel1.text"));
+        lbMundo.setText(resource.getString("MainFrame.jLabel2.text"));
+        btnEspanol.setText(resource.getString("MainFrame.jButton1.text"));
+        btnIngles.setText(resource.getString("MainFrame.text"));
     }
     
     /**
@@ -157,9 +158,9 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnEspanol;
+    private javax.swing.JButton btnIngles;
+    private javax.swing.JLabel lbHola;
+    private javax.swing.JLabel lbMundo;
     // End of variables declaration//GEN-END:variables
 }

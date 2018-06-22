@@ -28,13 +28,12 @@ public class SwingJPanel {
         
         // Panel de datos
         JPanel panelDatos = new JPanel();
-        GridLayout gl = new GridLayout(3, 2, 0, 5);
-        panelDatos.setLayout(gl);
+        panelDatos.setLayout(new GridLayout(3, 2, 0, 5));
         panelDatos.add(new JLabel("Nombre:"));
         panelDatos.add(new JTextField(10));
         panelDatos.add(new JLabel("Cedula:"));
         panelDatos.add(new JTextField(10));
-        panelDatos.add(new JLabel("Fecha de nacimiento: "));
+        panelDatos.add(new JLabel("Fecha de nacimiento:"));
         panelDatos.add(panelFecha);
 
         // Panel de botones

@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 public class SwingComponentes {
     public static void main(String[] args) {
         // Creando mi primera ventana
-        JFrame f = new JFrame("Mi Primera Ventana");
+        JFrame f = new JFrame("Componentes de una Ventana");
         f.setSize(500, 300);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);

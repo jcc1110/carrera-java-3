@@ -5,17 +5,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class ManejoEvento implements ActionListener {
-    private JTextField texto;
+    private JTextField textoInterno;
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        // Mostrando un mensaje de saludo
-        JOptionPane.showMessageDialog(null, "¡Hola mundo!" + this.texto.getText());
+        String mensaje;
+        String valor = this.textoInterno.getText();
+        mensaje = (!valor.isEmpty()) ? "Hola, " + valor : "¡Hola mundo!";  
+        JOptionPane.showMessageDialog(null, mensaje);
     }
 
     public ManejoEvento(JTextField texto) {
-        this.texto = texto;
+        this.textoInterno = texto;
     }
-    
-    public ManejoEvento() { }
 }

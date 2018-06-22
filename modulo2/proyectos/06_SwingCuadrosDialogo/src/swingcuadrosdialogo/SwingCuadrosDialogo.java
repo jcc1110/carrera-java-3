@@ -27,10 +27,26 @@ public class SwingCuadrosDialogo {
         
         // Eventos
         ActionListener eventoAvisos = e -> {
-            JOptionPane.showMessageDialog(avisos, "Mensaje de Información", "INFORMATION_MESSAGE", JOptionPane.INFORMATION_MESSAGE);            
-            JOptionPane.showMessageDialog(avisos, "Mensaje de Advertencia", "WARNING_MESSAGE", JOptionPane.WARNING_MESSAGE);            
-            JOptionPane.showMessageDialog(avisos, "Mensaje de Error", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);            
-            JOptionPane.showMessageDialog(avisos, "Pregunta", "QUESTION_MESSAGE", JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(
+                avisos, 
+                "Mensaje de Información",
+                "INFORMATION_MESSAGE", 
+                JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(
+                avisos, 
+                "Mensaje de Advertencia",
+                "WARNING_MESSAGE", 
+                JOptionPane.WARNING_MESSAGE);            
+            JOptionPane.showMessageDialog(
+                avisos, 
+                "Mensaje de Error", 
+                "ERROR_MESSAGE", 
+                JOptionPane.ERROR_MESSAGE);            
+            JOptionPane.showMessageDialog(
+                avisos, 
+                "Pregunta", 
+                "QUESTION_MESSAGE", 
+                JOptionPane.QUESTION_MESSAGE);
         };
         avisos.addActionListener(eventoAvisos);
         
@@ -43,10 +59,10 @@ public class SwingCuadrosDialogo {
         ActionListener eventoConfirmar2 = e -> {
             int respuesta = JOptionPane.showConfirmDialog(
                 confirmar2, 
-                "¿Esta seguro/a?", 
+                "¿Esta seguro/a de realizar esta acción?", 
                 "Acción a realizar", 
                 JOptionPane.YES_NO_CANCEL_OPTION, 
-                JOptionPane.QUESTION_MESSAGE);
+                JOptionPane.WARNING_MESSAGE);
             System.out.println(respuesta);
         };
         confirmar2.addActionListener(eventoConfirmar2);
