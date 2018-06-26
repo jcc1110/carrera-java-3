@@ -7,8 +7,7 @@ import javax.faces.convert.FacesConverter;
 @FacesConverter("com.controllers.UrlConverter")
 public class UrlConverter implements Converter {
     @Override
-    public Object getAsObject(FacesContext context, 
-            UIComponent component, String value) {
+    public Object getAsObject(FacesContext context, UIComponent component, String value) {
         // Variables
         StringBuilder url = new StringBuilder();
         

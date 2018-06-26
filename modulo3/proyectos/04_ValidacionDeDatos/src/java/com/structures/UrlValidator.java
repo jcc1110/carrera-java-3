@@ -9,8 +9,8 @@ import javax.faces.validator.ValidatorException;
 @FacesValidator("com.structures.UrlValidator")
 public class UrlValidator implements Validator {
     @Override
-    public void validate(FacesContext context, 
-            UIComponent component, Object value) throws ValidatorException {       
+    public void validate(FacesContext context, UIComponent component, 
+            Object value) throws ValidatorException {       
         try {
             // Variables necesarias
             String urlValue = value.toString();
@@ -24,10 +24,13 @@ public class UrlValidator implements Validator {
                 // Genero una Exception
                 throw new ValidatorException(msg);
             }            
-        } catch (ValidatorException e) {
+        } catch (ValidatorException e) {            
+            // Muestro un mensaje de error personalizado
             FacesMessage msg = new FacesMessage(e.getMessage());
             msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+            
+            // Genero una Exception
             throw new ValidatorException(msg);
         }
-    }    
+    }
 }

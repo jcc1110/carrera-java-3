@@ -12,32 +12,31 @@
         <ol>
             <li>
                 [minFractionDigits="2"]:
-                <h:outputText value="#{persona.monto}" >
-                    <f:convertNumber minFractionDigits="2" 
-                                     maxFractionDigits="3" />
+                <h:outputText value="#{ persona.monto }">
+                    <f:convertNumber minFractionDigits="2" maxFractionDigits="3" />
                 </h:outputText>
             </li>
             <li>
                 [pattern="#0.0"]: 
-                <h:outputText value="#{persona.monto}" >
+                <h:outputText value="#{ persona.monto }">
                     <f:convertNumber pattern="#0.0" />
                 </h:outputText>
             </li>
             <li>
                 [currencySymbol="BS"]:
-                <h:outputText value="#{persona.monto}">
+                <h:outputText value="#{ persona.monto }">
                     <f:convertNumber currencySymbol="BS" type="currency" />
                 </h:outputText>
             </li>
             <li>
                 [currencyCode="VEF"]: 
-                <h:outputText value="#{persona.monto}" >
+                <h:outputText value="#{ persona.monto }">
                     <f:convertNumber currencyCode="VEF" type="currency" />
                 </h:outputText>
             </li>
             <li>
-                [percent]: 
-                <h:outputText value="#{persona.monto}" >
+                [percent]:
+                <h:outputText value="#{ persona.monto }" >
                     <f:convertNumber type="percent" />
                 </h:outputText>
             </li>
@@ -46,8 +45,8 @@
         <!-- ConvertDateTime -->
         <h2>ConvertDateTime</h2>
         <h:form>
-            <h:outputText value="Formato: 12-01-2012"/><br/>
-            <h:inputText id="txtDate" value="#{persona.fecha}" label="Fecha">
+            <h:outputText value="Formato esperado: 12-01-2012"/><br/>
+            <h:inputText id="txtDate" value="#{ persona.fecha }" label="Fecha">
                 <f:convertDateTime pattern="dd-mm-yyyy" />
             </h:inputText>
             <h:commandButton value="Convertir" action="resultado"/>

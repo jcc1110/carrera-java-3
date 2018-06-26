@@ -11,12 +11,15 @@
         <h:form>
         <ul>
             <li>
+                <!-- Navegación Estática -->
                 <h:commandButton value="Página 1" action="page1.xhtml"/>
             </li>
             <li>
+                <!-- Navegación Dinámica -->
                 <h:commandButton value="Página 2" action="page2"/>
             </li>
             <li>
+                <!-- Navegación Dinámica -->
                 <h:commandButton value="Página 3" action="#{ sb.obtener() }"/>
             </li>
         </ul>

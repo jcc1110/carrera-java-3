@@ -9,7 +9,9 @@
 
     <ui:define name="content">
         <p>Texto desde Home</p>
-        <hr />        
+        <hr />
+        
+        <!-- Archivo externo -->
         <ui:include src="./templates/saludo.xhtml">
             <ui:param name="name" value="#{ sb.name }"/>
             <ui:param name="year" value="#{ sb.year }"/>
