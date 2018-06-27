@@ -9,35 +9,34 @@
     </h:head>
     <h:body>
         <h1>Información</h1>
-        <hr/>
-        <h:form>
-            <h:dataTable 
-                        value="#{ eb.lstEmpleados }"
-                        rendered="#{ not empty eb.lstEmpleados }"
-                        var="emp" 
-                        styleClass="employeeTable"
-                        headerClass="employeeTableHeader"
-                        rowClasses="employeeTableOddRow, employeeTableEvenRow">
-                <h:column>
-                    <f:facet name="header">Nombre</f:facet>
-                    #{ emp.nombre }
-                </h:column>                
-                <h:column>
-                    <f:facet name="header">Apellido</f:facet>
-                    #{ emp.apellido }
-                </h:column>                
-                <h:column>
-                    <f:facet name="header">Género</f:facet>
-                    #{ emp.genero }
-                </h:column>                
-                <h:column>
-                    <f:facet name="header">Salario</f:facet>
-                    #{ emp.salario }
-                </h:column>
-            </h:dataTable>
-            <h:outputLabel value="Sin datos para mostrar" 
-                           rendered="#{ empty eb.lstEmpleados }"
-                           style="color:blue;" />
-        </h:form>
+        <hr/>        
+        <h:dataTable 
+            value="#{ eb.lstEmpleados }"
+            rendered="#{ not empty eb.lstEmpleados }"
+            var="emp" 
+            styleClass="employeeTable"
+            headerClass="employeeTableHeader"
+            rowClasses="employeeTableOddRow, employeeTableEvenRow">
+            <h:column>
+                <f:facet name="header">Nombre</f:facet>
+                #{ emp.nombre }
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Apellido</f:facet>
+                #{ emp.apellido }
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Género</f:facet>
+                #{ emp.genero }
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Salario</f:facet>
+                #{ emp.salario }
+            </h:column>
+        </h:dataTable>
+        <h:outputLabel 
+            value="Sin datos para mostrar" 
+            rendered="#{ empty eb.lstEmpleados }"
+            style="color:blue;" />        
     </h:body>
 </html>

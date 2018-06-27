@@ -7,8 +7,8 @@
     
     <composite:interface>
         <composite:attribute name="titulo" required="true" />
-        <composite:attribute name="usuarioLabel" required="true" />
-        <composite:attribute name="claveLabel" required="true" />
+        <composite:attribute name="usuarioLabel" />
+        <composite:attribute name="claveLabel" />
         <composite:attribute name="botonLabel" required="true" />
     </composite:interface>
     
@@ -20,20 +20,19 @@
             <!-- Elementos -->
             <h:panelGrid columns="2">
                 <h:outputLabel value="#{ cc.attrs.usuarioLabel }" />
-                <h:inputText value="#{ ub.usuario }" label="Usuario">
+                <h:inputText value="#{ ub.usuario }" label="#{ cc.attrs.usuarioLabel }">
                     <f:validateRequired />
                 </h:inputText>
                 
                 <h:outputLabel value="#{ cc.attrs.claveLabel }" />
-                <h:inputSecret value="#{ ub.clave }" label="Clave">
+                <h:inputSecret value="#{ ub.clave }" label="#{ cc.attrs.claveLabel }">
                     <f:validateRequired />
                 </h:inputSecret>
             </h:panelGrid>
             
             <!-- Botón -->
             <br/>
-            <h:commandButton value="#{ cc.attrs.botonLabel }" 
-                             action="#{ ub.login() }" />
+            <h:commandButton value="#{ cc.attrs.botonLabel }" action="#{ ub.login() }" />
         </h:form>
     </composite:implementation>
     

@@ -12,28 +12,26 @@
     <composite:implementation>
         <h:outputStylesheet library="css" name="styles.css" />
         <h2>#{ cc.attrs.titulo }</h2>
-        <h:form>
-            <h:dataTable 
-                        value="#{ eb.lstEmpleados }"
-                        rendered="#{ not empty eb.lstEmpleados }"
-                        var="empleado" 
-                        styleClass="employeeTable"
-                        headerClass="employeeTableHeader"
-                        rowClasses="employeeTableOddRow, employeeTableEvenRow">
-                <h:column>
-                    <f:facet name="header">Nombre</f:facet>
-                    #{ empleado.nombre }
-                </h:column>                
-                <h:column>
-                    <f:facet name="header">Apellido</f:facet>
-                    #{ empleado.apellido }
-                </h:column>            
-                <h:column>
-                    <f:facet name="header">Salario</f:facet>
-                    #{ empleado.salario }
-                </h:column>
-            </h:dataTable>            
-        </h:form>
+        <h:dataTable 
+            value="#{ eb.lstEmpleados }"
+            rendered="#{ not empty eb.lstEmpleados }"
+            var="empleado" 
+            styleClass="employeeTable"
+            headerClass="employeeTableHeader"
+            rowClasses="employeeTableOddRow, employeeTableEvenRow">
+            <h:column>
+                <f:facet name="header">Nombre</f:facet>
+                #{ empleado.nombre }
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Apellido</f:facet>
+                #{ empleado.apellido }
+            </h:column>            
+            <h:column>
+                <f:facet name="header">Salario</f:facet>
+                #{ empleado.salario }
+            </h:column>
+        </h:dataTable>
     </composite:implementation>
     
 </html>

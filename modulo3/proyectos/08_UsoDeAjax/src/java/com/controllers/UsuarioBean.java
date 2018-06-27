@@ -10,6 +10,11 @@ public class UsuarioBean implements Serializable {
     private static final long serialVersionUID = 1L;
     private String nombre;
     private String bienvenido;
+    
+    // Constructor
+    public UsuarioBean() {
+        this.nombre = "";
+    }
 
     // Métodos
     public String getNombre() {
@@ -21,7 +26,7 @@ public class UsuarioBean implements Serializable {
     }
     
     public String getBienvenido() {
-        this.bienvenido = "Bienvenido/a, " + this.getNombre();
+        this.bienvenido = (this.getNombre().isEmpty()) ? "" : "Bienvenido/a, " + this.getNombre();
         return this.bienvenido;
     }
 

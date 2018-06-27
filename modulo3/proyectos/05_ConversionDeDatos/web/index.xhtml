@@ -57,7 +57,7 @@
         <h2>Convertidor Personalizado de URL</h2>
         <h:form>
             <h:inputText id="txtUrl" value="#{ persona.url }" label="URL">
-                <f:converter converterId="com.controllers.UrlConverter" />
+                <f:converter converterId="com.structures.UrlConverter" />
             </h:inputText>		 
             <h:commandButton value="Convertir" action="resultado"/>
         </h:form>

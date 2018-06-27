@@ -6,16 +6,16 @@ import javax.inject.Named;
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.event.ValueChangeEvent;
 
-@Named(value = "ub")
+@Named(value = "cl")
 @ApplicationScoped
-public class AccionBean implements Serializable {
+public class CambioListaBean implements Serializable {
     // Atributos
     private static final long serialVersionUID = 1L;
     private String paisSeleccionado = "Venezuela";
     private List<String> paises;
     
     // Métodos
-    public AccionBean() {
+    public CambioListaBean() {
         this.paises = new ArrayList<>();
         this.paises.add("Venezuela");
         this.paises.add("Chile");

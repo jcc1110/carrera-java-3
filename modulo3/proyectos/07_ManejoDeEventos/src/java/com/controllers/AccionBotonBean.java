@@ -4,9 +4,9 @@ import javax.inject.Named;
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.event.ActionEvent;
 
-@Named(value = "db")
+@Named(value = "ab")
 @ApplicationScoped
-public class CambioBean implements Serializable {
+public class AccionBotonBean implements Serializable {
     // Atributos
     private static final long serialVersionUID = 1L;
     private String nombre;

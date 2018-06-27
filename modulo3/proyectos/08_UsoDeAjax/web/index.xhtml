@@ -7,7 +7,13 @@
         <title>Uso de AJAX</title>
         <script>
             function mensajeInfo() { alert('Esto quizás tarde unos minutos.'); }
-            function mensajeError() { alert('Ocurrio un error al ejecutar.'); }
+            function mensajeError(error) {                
+                console.log(error);
+                if (error) {
+                    alert('Ocurrio un error al ejecutar.');
+                    console.log(error);
+                }
+            }
         </script>
     </h:head>
     <h:body>
@@ -20,7 +26,7 @@
                 <f:ajax render="txtMensaje" immediate="true" />
             </h:inputText>
             
-            <h:commandButton value="Enviar Dato">
+            <h:commandButton value="Enviar">
                 <f:ajax execute="txtNombre"
                         render="txtMensaje" 
                         onevent="mensajeInfo()"

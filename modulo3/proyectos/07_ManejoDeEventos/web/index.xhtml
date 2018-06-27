@@ -14,13 +14,13 @@
                 <h:panelGrid columns="2">
                     Seleccionar:
                     <h:selectOneMenu 
-                                    value="#{ ub.paisSeleccionado }" 
-                                    onchange="submit()" 
-                                    valueChangeListener="#{ ub.cambioDePais }">
-                        <f:selectItems value="#{ ub.paises }" />
+                        value="#{ cl.paisSeleccionado }" 
+                        onchange="submit()" 
+                        valueChangeListener="#{ cl.cambioDePais }">
+                        <f:selectItems value="#{ cl.paises }" />
                     </h:selectOneMenu>
                     Nombre del país:
-                    <h:outputText value="#{ ub.paisSeleccionado }"/>
+                    <h:outputText value="#{ cl.paisSeleccionado }"/>
                 </h:panelGrid>
             </h:form>
             <h:form>
@@ -28,14 +28,13 @@
                 <h:panelGrid columns="2">
                     Seleccionar:
                     <h:selectOneMenu 
-                                    value="#{ ub.paisSeleccionado }" 
-                                    onchange="submit()">
-                        <f:valueChangeListener 
-                                type="com.events.LocaleChangeListener" />
-                        <f:selectItems value="#{ ub.paises }" />
+                        value="#{ cl.paisSeleccionado }" 
+                        onchange="submit()">
+                        <f:valueChangeListener type="com.events.LocaleChangeListener" />
+                        <f:selectItems value="#{ cl.paises }" />
                     </h:selectOneMenu>
                     Nombre del país:
-                    <h:outputText value="#{ ub.paisSeleccionado }"/>
+                    <h:outputText value="#{ cl.paisSeleccionado }"/>
                 </h:panelGrid>
             </h:form>
         </h:panelGrid>
@@ -46,15 +45,15 @@
         <h:panelGrid columns="2">
             <h:form>
                 <h2>Method Binding</h2>
-                <h:outputText value="#{ db.nombre }" /><br/>
-                <h:commandButton value="Enviar" actionListener="#{ db.updateNombreBinding }" />
+                <h:outputText value="#{ ab.nombre }" /><br/>
+                <h:commandButton value="Enviar" actionListener="#{ ab.updateNombreBinding }" />
             </h:form>
             <h:form>
                 <h2>Interface</h2>
-                <h:outputText id="txtNombre" value="#{ db.nombre }" /><br/>
+                <h:outputText id="txtNombre" value="#{ ab.nombre }" /><br/>
                 <h:commandButton value="Enviar" onclick="submit()">
                     <f:actionListener type="com.events.UserActionListener" />
-                    <f:setPropertyActionListener target="#{ db.nombre }" value="Pedro Perez" />
+                    <f:setPropertyActionListener target="#{ ab.nombre }" value="Pedro Perez" />
                 </h:commandButton>
             </h:form>
         </h:panelGrid>

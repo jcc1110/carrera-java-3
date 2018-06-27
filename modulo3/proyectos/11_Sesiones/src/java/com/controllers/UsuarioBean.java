@@ -33,27 +33,40 @@ public class UsuarioBean implements Serializable {
     
     // Iniciar sesión
     public String login() {
-        String resultado;        
+        String resultado;
+        
         if ("anthony".equals(this.getUsuario().toLowerCase()) && 
                 "123456".equals(this.getClave().toLowerCase())) {
             resultado = "exito";
+            
+            // Obtener la sesión actual
             HttpSession session = this.getCurrentSession();
+            
+            // Creando atributos para mi sesión
             session.setAttribute("usuario", this.getUsuario());
             session.setAttribute("rol", "Administrador");
         } else {
             resultado = "error";
-            FacesMessage fm = new FacesMessage(FacesMessage.SEVERITY_WARN, "Usuario o clave incorrectos", "ERROR");
+            FacesMessage fm = new FacesMessage(
+                FacesMessage.SEVERITY_ERROR, "Usuario o clave incorrectos", "ERROR");
             FacesContext.getCurrentInstance().addMessage(null, fm);            
-        }        
+        }  
+        
         return resultado;
     }
     
     // Cerrar sesión
     public String logout() {
+        // Obtener la sesión actual
         HttpSession session = this.getCurrentSession();
+        
+        // Remuevo los atributos establecidos
         session.removeAttribute("usuario");
         session.removeAttribute("rol");
+        
+        // Invalido la sesión
         session.invalidate();
+        
         return "login";
     }
     
