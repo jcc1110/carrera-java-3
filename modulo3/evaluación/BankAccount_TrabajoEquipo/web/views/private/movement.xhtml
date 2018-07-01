@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../../resources/templates/online.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="title">
+        Movimientos Bancarios
+    </ui:define>
+
+    <ui:define name="content">
+        <h2>Movimientos Bancarios</h2>
+        <hr/>
+          <h:dataTable >
+            <h:column>
+                <f:facet name="header">Cuenta Origen</f:facet>
+                
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Cuenta Destino</f:facet>
+              
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Fecha</f:facet>
+                
+            </h:column>                
+            <h:column>
+                <f:facet name="header">Valor</f:facet>
+                
+            </h:column>
+        </h:dataTable>
+        <h:outputLabel 
+            value="Sin datos para mostrar" 
+            style="color:blue;" />    
+    </ui:define>
+
+</ui:composition>
