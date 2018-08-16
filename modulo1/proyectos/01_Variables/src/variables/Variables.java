@@ -1,3 +1,4 @@
+
 package variables;
 
 public class Variables {
@@ -26,6 +27,6 @@ public class Variables {
         
         // Presentación de los valores
         System.out.println("El valor de mi variable global modificada es: " + a);
-        System.out.println("El valor de mi variable local modificada es: " + c);
+        System.out.println("El valor de mi variable local modificada es: " + c);        
     }
 }

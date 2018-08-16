@@ -10,17 +10,19 @@ public class Casting {
         Double c = 12.9458957;
         
         // Realizando el Casting primitivos y referenciales
-        Short aC = (short)a;
-        Long bC = b.longValue();
-        Integer cC = c.intValue();
+        // Implicitos
+        Short aConvertido = (short)a;
+        Long bConvertido = b.longValue();
+        // Explicitos
+        Integer cConvertido = c.intValue();
         
         // Formateo de decimales
         NumberFormat formatoDec = new DecimalFormat("#0.00");
         System.out.println("Formateando los decimales: " + formatoDec.format(c));
         
         // Presentando los valores
-        System.out.println("El valor Short es: " + aC + " - " + aC.getClass());
-        System.out.println("El valor Long es: " + bC + " - " + bC.getClass());
-        System.out.println("El valor Integer es: " + cC + " - " + cC.getClass());
+        System.out.println("El valor Short es: " + aConvertido + " - " + aConvertido.getClass());
+        System.out.println("El valor Long es: " + bConvertido + " - " + bConvertido.getClass());
+        System.out.println("El valor Integer es: " + cConvertido + " - " + cConvertido.getClass());
     }
 }
